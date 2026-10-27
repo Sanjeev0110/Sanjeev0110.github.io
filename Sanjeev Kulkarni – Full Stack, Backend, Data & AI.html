@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sanjeev Kulkarni – Full Stack, Backend, Data & AI</title>
+<meta name="description" content="Portfolio of Sanjeev Kulkarni: full stack and backend development, data analysis and AI with Python, JavaScript, SQL and REST APIs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCFCFA;--card:#F3F3F0;--ink:#161616;--mute:#6B6B68;--line:#E3E3DE;--acc:#5B4BFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121214;--card:#1B1B1F;--ink:#F2F2F0;--mute:#9A9A97;--line:#2C2C31;--acc:#A39BFF}}
+:root[data-theme="dark"]{--bg:#121214;--card:#1B1B1F;--ink:#F2F2F0;--mute:#9A9A97;--line:#2C2C31;--acc:#A39BFF}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Hanken Grotesk",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:660px;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:6}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0;font-size:.95rem}
+nav div{display:flex;gap:1.4rem}
+nav a{text-decoration:none;color:var(--mute);transition:color .2s}
+nav a:hover{color:var(--ink)}
+.ic{background:none;border:0;color:var(--mute);cursor:pointer;font:inherit;padding:.2rem .4rem}
+.ic:hover{color:var(--ink)}
+.id{display:flex;gap:1rem;align-items:center;margin:2.5rem 0 1.2rem}
+.av{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#7DD3FC,#A78BFA 60%,#F9A8D4);display:grid;place-items:center;font:700 1.2rem "Hanken Grotesk",sans-serif;color:#fff;flex:none}
+h1{font:700 1.8rem/1.1 "Hanken Grotesk",sans-serif;letter-spacing:-.02em;margin:0}
+.role{color:var(--mute);margin:0}
+.bio{color:var(--mute);margin:0 0 1rem}
+.bio b{color:var(--ink);font-weight:500}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;margin-top:1.6rem}
+.sk{display:grid;grid-template-columns:7.5rem 1fr;gap:.35rem 1rem;margin:0 0 1rem;font-size:.95rem}
+.sk dt{color:var(--mute)}
+.sk dd{margin:0}
+.cta{border-top:1px solid var(--line);padding-top:1.1rem}
+.status{display:flex;align-items:center;gap:.5rem;margin:0 0 .5rem;font-size:.9rem;color:var(--mute)}
+.status i{width:8px;height:8px;border-radius:50%;background:#22C55E;animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 #22C55E99}70%,100%{box-shadow:0 0 0 8px #22C55E00}}
+.pitch{font:italic 400 1.6rem/1.2 "Instrument Serif",Georgia,serif;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
+.btn{display:inline-flex;gap:.5rem;align-items:center;padding:.55rem 1rem;border-radius:10px;font-weight:500;font-size:.95rem;text-decoration:none;border:1px solid var(--line);background:var(--bg);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+h2{font:400 2rem/1 "Instrument Serif",Georgia,serif;font-style:italic;margin:3.5rem 0 1.2rem}
+.proj{display:grid;grid-template-columns:1fr auto;gap:.1rem 1rem;padding:1rem .8rem;margin:0 -.8rem;border-radius:12px;text-decoration:none;transition:background .2s}
+.proj:hover{background:var(--card)}
+.proj strong{font-weight:600}
+.proj span{color:var(--mute);font-size:.9rem}
+.proj p{grid-column:1/-1;margin:.2rem 0 0;color:var(--mute);font-size:.95rem}
+.tags{font:.8rem/1.6 ui-monospace,Menlo,Consolas,monospace;color:var(--mute);margin-top:.3rem;grid-column:1/-1}
+.job{margin-bottom:1.6rem}
+.job .top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.job strong{font-weight:600}
+.job .top span,.job li,.job>p{color:var(--mute);font-size:.95rem;margin:0}
+.job ul,.ach{margin:.5rem 0 0;padding-left:1.1rem;color:var(--mute);font-size:.95rem}
+.job li,.ach li{margin-bottom:.35rem}
+.soc{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem;padding:0;margin:0;list-style:none}
+.soc a{text-decoration:none;color:var(--mute);transition:color .2s}
+.soc a:hover{color:var(--acc)}
+.quote{margin:4.5rem 0 0;padding:0 .5rem;text-align:center;font:italic 400 clamp(1.5rem,5vw,2.1rem)/1.25 "Instrument Serif",Georgia,serif;text-wrap:balance}
+.quote::before{content:"";display:block;width:2.5rem;height:3px;border-radius:2px;background:var(--acc);margin:0 auto 1.4rem}
+footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:4rem;padding:1.2rem 0 2rem;color:var(--mute);font-size:.85rem}
+#intro{position:fixed;inset:0;z-index:50;background:var(--bg);display:grid;place-items:center;transition:transform .8s cubic-bezier(.77,0,.18,1)}
+#intro.out{transform:translateY(-100%)}
+#greet{font:700 clamp(1.8rem,6vw,3rem)/1 "Hanken Grotesk",sans-serif;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
+#greet::before{content:"";width:.35em;height:.35em;border-radius:50%;background:var(--ink)}
+#me{display:none;align-items:center;gap:1rem;animation:pop .6s cubic-bezier(.2,.9,.3,1.3)}
+#me .av{width:56px;height:56px;font-size:1.05rem}
+#me b{font-size:1.6rem;letter-spacing:-.02em}
+@keyframes pop{from{opacity:0;transform:scale(.7)}}
+#skip{position:absolute;bottom:calc(2rem + env(safe-area-inset-bottom,0px));font-size:.85rem}
+@media (max-width:520px){.soc{grid-template-columns:1fr}.sk{grid-template-columns:1fr;gap:0}.sk dd{margin-bottom:.6rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+
+
+
+</style>
+</head>
+<body>
+<div id="intro" role="status" aria-label="Welcome">
+<div id="greet">Hello</div>
+<div id="me"><div class="av">SK</div><b>Sanjeev</b></div>
+<button id="skip" class="ic" type="button">Skip intro</button>
+</div>
+
+<div class="wrap">
+<header><nav><div><a href="#top">home</a><a href="#work">projects</a><a href="#exp">experience</a><a href="#contact">contact</a></div><button class="ic" id="theme" type="button" aria-label="Switch theme">◐</button></nav></header>
+
+<main id="top">
+<div class="id"><div class="av">SK</div><div><h1>Sanjeev Kulkarni</h1><p class="role">Full Stack Developer, Data Analyst &amp; AI Enthusiast</p></div></div>
+<p class="bio">I build software end to end, from <b>backend logic and REST APIs</b> to the interfaces on top, and I turn large datasets into <b>reports and dashboards</b> people can act on. I’m increasingly drawn to <b>AI</b>: chat assistants and machine learning.</p>
+<p class="bio">Two years in, I work as a Software Consultant at <b>Quadface Technologies</b>. I hold an MCA from KLE Technological University and a Gold Badge on HackerRank.</p>
+
+
+<div class="panel">
+<dl class="sk">
+<dt>Languages</dt><dd>JavaScript,Java, Go, SQL, PL/SQL</dd>
+<dt>Backend &amp; tools</dt><dd>REST APIs, Oracle Database, stored procedures, Docker, Git/GitHub</dd>
+<dt>AI &amp; ML</dt><dd>scikit-learn, pandas, conversational AI with Kore.ai</dd>
+<dt>Data analysis</dt><dd>SQL, Tableau, Microsoft Excel, SAS (Basic), data validation and reconciliation</dd>
+<dt>Strengths</dt><dd>API integration, query optimization, reporting and visualization</dd>
+</dl>
+<div class="cta">
+<p class="status"><i></i>Open to full stack, backend, data and AI roles</p>
+<p class="pitch">Have something to build with data or AI? Let’s talk.</p>
+<div class="btns"><a class="btn dark" href="mailto:sanjeevkulkarni9899@gmail.com?subject=Hello%20Sanjeev">Email me</a><a class="btn" href="#">Download resume ↓</a><a class="btn" href="#contact">See socials</a></div>
+</div>
+</div>
+
+<h2 id="work">projects.</h2>
+<a class="proj" href="#"><strong>Healthcare Customer Service Automation</strong><span>Conversational AI</span><p>A virtual assistant for appointment management and insurance eligibility, driven by live REST API responses. It maps backend data to ten status scenarios and hands off to a human agent with only non-sensitive context.</p><div class="tags">Kore.ai XO 11 / AI/ REST APIs / JavaScript</div></a>
+<a class="proj" href="#"><strong>DDoS Attack Detection</strong><span>ML</span><p>An AdaBoost classifier that detects DDoS attacks from network traffic data. Evaluated with accuracy, precision and a confusion matrix to reduce false positives.</p><div class="tags">Python / pandas / scikit-learn</div></a>
+<a class="proj" href="#"><strong>Smart Budget Tracker</strong><span>Oracle</span><p>A budgeting system covering expense tracking, debt management and financial reporting, with monthly summaries and category-wise insights built on SQL aggregates.</p><div class="tags">Oracle PL/SQL / Functions / Stored procedures / Packages / Schema design</div></a>
+
+<h2 id="exp">experience.</h2>
+<div class="job"><div class="top"><strong>Software Consultant , Quadface Technologies</strong><span>Jun 2024 – Present</span></div><p>Remote</p>
+<ul>
+<li>Support daily and monthly production allocation in Energy Components, keeping upstream production reporting accurate.</li>
+<li>Validate and reconcile well-level production data across allocation cycles, resolving discrepancies.</li>
+<li>Write and optimize SQL queries to analyze large production datasets.</li>
+<li>Build Tableau dashboards that track production trends, and prepare recurring reports for stakeholders.</li>
+</ul></div>
+
+<h2>education.</h2>
+<div class="job"><div class="top"><strong>KLE Technological University, Hubballi</strong><span>Feb 2022 – Jan 2024</span></div><p>Master of Computer Applications (MCA), CGPA 8.54</p></div>
+
+<h2>achievements.</h2>
+<ul class="ach">
+<li>Earned the Gold Badge on HackerRank (SQL / Python).</li>
+<li>Took part in the EY Scholarship Program, “A Brand Called YOU”.</li>
+<li>Featured on Quadface Technologies’ official website for my contributions.</li>
+</ul>
+
+
+
+<h2 id="contact">socials.</h2>
+<ul class="soc">
+<li><a href="https://github.com/Sanjeev0110/" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+<li><a href="https://www.linkedin.com/in/sanjeev-kulkarni-a03563229/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+<li><a href="mailto:sanjeevkulkarni9899@gmail.com">Email ↗</a></li>
+</ul>
+</main>
+<blockquote class="quote">“If you want to do what you want to do, you have to do what you have to do.”</blockquote>
+<footer><span>Last updated · Oct 23, 2026</span><span>© 2026 Sanjeev Kulkarni</span></footer>
+</div>
+
+
+
+<script>
+(function(){
+var root=document.documentElement,intro=document.getElementById('intro'),g=document.getElementById('greet'),me=document.getElementById('me');
+document.getElementById('theme').onclick=function(){var d=getComputedStyle(root).getPropertyValue('--bg').trim()==='#121214';root.setAttribute('data-theme',d?'light':'dark')};
+var words=['Hello','ನಮಸ್ಕಾರ','नमस्ते','Hola','Bonjour','こんにちは','Ciao'];
+var timers=[],done=false;
+function finish(){if(done)return;done=true;timers.forEach(clearTimeout);intro.classList.add('out');try{sessionStorage.setItem('seen','1')}catch(e){}setTimeout(function(){intro.style.display='none'},900)}
+var seen=false;try{seen=sessionStorage.getItem('seen')==='1'}catch(e){}
+if(seen||matchMedia('(prefers-reduced-motion:reduce)').matches){intro.style.display='none';done=true}
+else{
+words.forEach(function(w,i){timers.push(setTimeout(function(){g.textContent=w},i*230))});
+timers.push(setTimeout(function(){g.style.display='none';me.style.display='flex'},words.length*230+100));
+timers.push(setTimeout(finish,words.length*230+1300));
+document.getElementById('skip').onclick=finish;
+}
+})();
+</script>
+</body>
+</html>
