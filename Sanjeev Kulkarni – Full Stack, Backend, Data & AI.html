@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sanjeev Kulkarni – Full Stack, Backend, Data & AI</title>
+<meta name="description" content="Portfolio of Sanjeev Kulkarni: full stack and backend development, data analysis and AI with Python, JavaScript, SQL and REST APIs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCFCFA;--card:#F3F3F0;--ink:#161616;--mute:#6B6B68;--line:#E3E3DE;--acc:#5B4BFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121214;--card:#1B1B1F;--ink:#F2F2F0;--mute:#9A9A97;--line:#2C2C31;--acc:#A39BFF}}
+:root[data-theme="dark"]{--bg:#121214;--card:#1B1B1F;--ink:#F2F2F0;--mute:#9A9A97;--line:#2C2C31;--acc:#A39BFF}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;height:auto}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Hanken Grotesk",system-ui,sans-serif}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:660px;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:6}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0;font-size:.95rem}
+nav div{display:flex;gap:1.4rem}
+nav a{text-decoration:none;color:var(--mute);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="true"]{color:var(--ink);border-color:var(--acc)}
+.ic{background:none;border:0;color:var(--mute);cursor:pointer;padding:.2rem .4rem}
+.ic:hover{color:var(--ink)}
+.id{display:flex;gap:1rem;align-items:center;margin:2.5rem 0 1.2rem}
+.av{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#7DD3FC,#A78BFA 60%,#F9A8D4);display:grid;place-items:center;font:700 1.2rem "Hanken Grotesk",sans-serif;color:#fff;flex:none}
+h1{font:700 1.8rem/1.1 "Hanken Grotesk",sans-serif;letter-spacing:-.02em;margin:0}
+.role{color:var(--mute);margin:0}
+.bio{color:var(--mute);margin:0 0 1rem}
+.bio b{color:var(--ink);font-weight:500}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;margin-top:1.6rem}
+.sk{display:grid;grid-template-columns:7.5rem 1fr;gap:.35rem 1rem;margin:0 0 1rem;font-size:.95rem}
+.sk dt{color:var(--mute)}
+.sk dd{margin:0}
+.cta{border-top:1px solid var(--line);padding-top:1.1rem}
+.status{display:flex;align-items:center;gap:.5rem;margin:0 0 .5rem;font-size:.9rem;color:var(--mute)}
+.status i{width:8px;height:8px;border-radius:50%;background:#22C55E;animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 #22C55E99}70%,100%{box-shadow:0 0 0 8px #22C55E00}}
+.pitch{font:italic 400 1.6rem/1.2 "Instrument Serif",Georgia,serif;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
+.btn{display:inline-flex;gap:.5rem;align-items:center;padding:.55rem 1rem;border-radius:10px;font-weight:500;font-size:.95rem;text-decoration:none;cursor:pointer;border:1px solid var(--line);background:var(--bg);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+h2{font:400 2rem/1 "Instrument Serif",Georgia,serif;font-style:italic;margin:3.5rem 0 1.2rem}
+.proj{margin:0 -.8rem;border-radius:12px;transition:background .2s}
+.proj.open,.proj:hover{background:var(--card)}
+.proj>button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:.1rem 1rem;width:100%;padding:1rem .8rem;cursor:pointer;border-radius:12px}
+.proj>button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.proj strong{font-weight:600}
+.proj span{color:var(--mute);font-size:.9rem}
+.proj p{grid-column:1/-1;margin:.2rem 0 0;color:var(--mute);font-size:.95rem}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.open .more{grid-template-rows:1fr}
+.more>div{overflow:hidden;padding:0 .8rem}
+.more p{color:var(--mute);font-size:.95rem;margin:0 0 .8rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;grid-column:1/-1;margin-top:.5rem}
+.tags li{list-style:none;font-size:.8rem;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:.05rem .6rem;background:var(--bg)}
+.tags{padding:0;margin:.5rem 0 0}
+.chev{display:inline-block;transition:transform .3s}
+.open .chev{transform:rotate(180deg)}
+.job{margin-bottom:1.6rem}
+.job .top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.job strong{font-weight:600}
+.job .story{color:var(--ink);margin:.5rem 0 0}
+.stats{display:flex;gap:2rem;flex-wrap:wrap;margin:1rem 0 0}
+.stats b{display:block;font:italic 400 2rem/1 "Instrument Serif",Georgia,serif;color:var(--acc)}
+.stats span{font-size:.85rem;color:var(--mute)}
+.job .tags li{font-size:.8rem;margin:0}
+.job .top span,.job li,.job>p{color:var(--mute);font-size:.95rem;margin:0}
+.job ul,.ach{margin:.5rem 0 0;padding-left:1.1rem;color:var(--mute);font-size:.95rem}
+.job li,.ach li{margin-bottom:.35rem}
+.soc{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem;padding:0;margin:0;list-style:none}
+.soc a{text-decoration:none;color:var(--mute);transition:color .2s}
+.soc a:hover{color:var(--acc)}
+.quote{margin:4.5rem 0 0;padding:0 .5rem;text-align:center;font:italic 400 clamp(1.5rem,5vw,2.1rem)/1.25 "Instrument Serif",Georgia,serif;text-wrap:balance}
+.quote::before{content:"";display:block;width:2.5rem;height:3px;border-radius:2px;background:var(--acc);margin:0 auto 1.4rem}
+footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:4rem;padding:1.2rem 0 2rem;color:var(--mute);font-size:.85rem}
+#intro{position:fixed;inset:0;z-index:50;background:#fff;color:#161616;display:grid;place-items:center;transition:transform .8s cubic-bezier(.77,0,.18,1)}
+#intro.out{transform:translateY(-100%)}
+#greet{font:700 clamp(1.8rem,6vw,3rem)/1 "Hanken Grotesk",sans-serif;letter-spacing:-.02em;display:flex;align-items:center;gap:.6rem}
+#greet::before{content:"";width:.35em;height:.35em;border-radius:50%;background:currentColor}
+#me{display:flex;align-items:center;gap:1rem;animation:pop .6s cubic-bezier(.2,.9,.3,1.3)}
+#me .av{width:56px;height:56px;font-size:1.05rem}
+#me b{font-size:1.6rem;letter-spacing:-.02em}
+@keyframes pop{from{opacity:0;transform:scale(.7)}}
+#intro .ic{color:#6B6B68}
+#skip{position:absolute;bottom:calc(2rem + env(safe-area-inset-bottom,0px));font-size:.85rem}
+@media (max-width:520px){.soc{grid-template-columns:1fr}.sk{grid-template-columns:1fr;gap:0}.sk dd{margin-bottom:.6rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+(function(){
+var e=React.createElement,S=React.useState,E=React.useEffect,R=React.useRef,Fr=React.Fragment;
+var EMAIL="sanjeevkulkarni9899@gmail.com";
+
+/* ---------- data ---------- */
+var SKILLS=[
+["Languages","JavaScript, Python, Java, Go, SQL, PL/SQL"],
+["Web","HTML, CSS, React, Node.js, Django"],
+["Backend & tools","REST APIs, Google Apps Script, Docker, Kubernetes, Git/GitHub, VS Code"],
+["Databases","Oracle, Oracle SQL Developer, MySQL, PostgreSQL, Supabase, database design, stored procedures"],
+["AI & ML","scikit-learn, pandas, conversational AI with Kore.ai"],
+["Data analysis","SQL, Tableau, Metabase, Microsoft Excel, Google Sheets, SAS"],
+["Strengths","Data validation and reconciliation, reporting and dashboards, API integration, query optimization"]];
+var PROJECTS=[
+{name:"Healthcare Customer Service Automation",kind:"Conversational AI",
+ sum:"A virtual assistant for appointment management and insurance eligibility, driven by live REST API responses.",
+ more:"It maps backend data to ten status scenarios and hands off to a human agent with only non-sensitive context.",
+ tags:["Kore.ai XO 11","REST APIs","JavaScript"]},
+{name:"DDoS Attack Detection",kind:"ML",
+ sum:"An AdaBoost classifier that detects DDoS attacks from network traffic data.",
+ more:"Covers preprocessing and training, and is evaluated with accuracy, precision and a confusion matrix to reduce false positives.",
+ tags:["Python","pandas","scikit-learn"],
+ link:"https://github.com/Sanjeev0110/Machine-Learning-Project",linkText:"Explore the repository ↗"},
+{name:"Smart Budget Tracker",kind:"Oracle",
+ sum:"A budgeting system covering expense tracking, debt management and financial reporting.",
+ more:"Designed the database schema and stored procedures that produce monthly summaries and category-wise insights with SQL aggregates.",
+ tags:["Oracle PL/SQL","Stored procedures","Schema design"],
+ link:"https://github.com/Sanjeev0110/Smart-Budget-Tracker---PL-SQL-Project",linkText:"Explore the repository ↗"},
+{name:"Groser Website",kind:"Freelance",
+ sum:"An online ordering website for a grocery startup, using Google Sheets and Apps Script to collect and manage customer orders.",
+ more:"Validates mobile numbers, input limits and order quantities. Unique IDs, timestamps and status tracking keep order records consistent and prevent duplicates, and automated email alerts keep orders easy to monitor.",
+ tags:["HTML/CSS/JavaScript","Google Apps Script","Google Sheets"],
+ link:"https://groser.shop/",linkText:"Visit Groser ↗"}];
+var GROSER={role:"Backend data & reporting (freelance)",org:"Groser, an online grocery startup",when:"Feb 2026 – Present",
+ story:"I joined Groser early to set up its data from scratch. I look after the website’s backend data and inventory, follow daily orders, and turn sales numbers into Metabase dashboards the team can use to decide what to stock.",
+ stats:[["~INR 10L","monthly sales supported"],["5–7%","average monthly sales growth after the site launched"]],
+ tags:["Metabase","Excel","Google Sheets","Inventory tracking"]};
+var JOB={role:"Software Consultant Trainee",org:"Quadface Technologies, remote",when:"Jun 2024 – Feb 2026",
+ story:"I worked on upstream production data in Energy Components: supporting daily and monthly allocation, reconciling well-level numbers across cycles and resolving discrepancies. I wrote the SQL behind the reports, built Tableau dashboards for production trends, kept audit-ready validation logs, and trained junior teammates on SQL standards and EC workflows.",
+ tags:["SQL","Tableau","Energy Components","Data reconciliation"]};
+var ACH=["Earned the Gold Badge on HackerRank (SQL / Python).","Took part in the EY Scholarship Program, “A Brand Called YOU”.","Featured on Quadface Technologies’ official website for my contributions."];
+var NEXT=["Building more practical software projects.","Improving problem-solving and development skills.","Exploring AI-powered applications and automation.","Growing into credit and risk analytics.","Learning how to build better, more reliable systems."];
+var SOCIAL=[["GitHub ↗","https://github.com/Sanjeev0110/"],["LinkedIn ↗","https://www.linkedin.com/in/sanjeev-kulkarni-a03563229/"],["Email ↗","mailto:"+EMAIL],["Call +91 78130 88894","tel:+917813088894"]];
+var NAV=[["home","top"],["projects","work"],["experience","exp"],["contact","contact"]];
+
+/* ---------- hooks ---------- */
+function useTheme(){
+  var init="system";try{init=localStorage.getItem("theme")||"system"}catch(x){}
+  var s=S(init),t=s[0],set=s[1];
+  E(function(){
+    var r=document.documentElement;
+    if(t==="system")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);
+    try{localStorage.setItem("theme",t)}catch(x){}
+  },[t]);
+  function toggle(){
+    var dark=t==="dark"||(t==="system"&&matchMedia("(prefers-color-scheme:dark)").matches);
+    set(dark?"light":"dark");
+  }
+  return toggle;
+}
+function useActive(ids){
+  var s=S(ids[0]),a=s[0],set=s[1];
+  E(function(){
+    function onScroll(){
+      var y=window.scrollY+120,cur=ids[0];
+      ids.forEach(function(id){var el=document.getElementById(id);if(el&&el.offsetTop<=y)cur=id});
+      if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)cur=ids[ids.length-1];
+      set(cur);
+    }
+    onScroll();addEventListener("scroll",onScroll,{passive:true});
+    return function(){removeEventListener("scroll",onScroll)};
+  },[]);
+  return a;
+}
+
+/* ---------- components ---------- */
+function Intro(p){
+  var words=["Hello","ನಮಸ್ಕಾರ","नमस्ते","Hola","Bonjour","こんにちは","Ciao"];
+  var s=S(0),i=s[0],setI=s[1],o=S(false),out=o[0],setOut=o[1],doneRef=R(false);
+  function finish(){
+    if(doneRef.current)return;doneRef.current=true;setOut(true);
+    try{sessionStorage.setItem("seen","1")}catch(x){}
+    setTimeout(p.onDone,900);
+  }
+  E(function(){
+    var ids=[];
+    for(var k=1;k<=words.length;k++)(function(k){ids.push(setTimeout(function(){setI(k)},k*230))})(k);
+    ids.push(setTimeout(finish,words.length*230+1300));
+    return function(){ids.forEach(clearTimeout)};
+  },[]);
+  return e("div",{id:"intro",className:out?"out":"",role:"status","aria-label":"Welcome"},
+    i<words.length?e("div",{id:"greet"},words[i]):
+      e("div",{id:"me"},e("div",{className:"av"},"SK"),e("b",null,"Sanjeev")),
+    e("button",{id:"skip",className:"ic",type:"button",onClick:finish},"Skip intro"));
+}
+
+function Header(p){
+  return e("header",null,e("nav",null,
+    e("div",null,NAV.map(function(n){
+      return e("a",{key:n[1],href:"#"+n[1],"aria-current":p.active===n[1]?"true":undefined},n[0]);
+    })),
+    e("button",{className:"ic",type:"button","aria-label":"Switch theme",onClick:p.onTheme},"◐")));
+}
+
+function Project(p){
+  var d=p.p,s=S(false),open=s[0],set=s[1],id="pm-"+p.i;
+  return e("div",{className:"proj"+(open?" open":"")},
+    e("button",{type:"button","aria-expanded":open,"aria-controls":id,onClick:function(){set(!open)}},
+      e("strong",null,d.name),
+      e("span",null,d.kind+" ",e("span",{className:"chev","aria-hidden":"true"},"▾")),
+      e("p",null,d.sum)),
+    e("div",{className:"more",id:id},e("div",null,e("p",null,d.more),d.link&&e("a",{href:d.link,target:"_blank",rel:"noopener noreferrer",tabIndex:open?0:-1,style:{color:"var(--acc)",fontSize:".95rem",display:"inline-block",marginBottom:".8rem"}},d.linkText))),
+    e("ul",{className:"tags",style:{padding:"0 .8rem 1rem"}},d.tags.map(function(t){return e("li",{key:t},t)})));
+}
+
+function Hero(){
+  var s=S(false),copied=s[0],set=s[1];
+  function copy(){
+    try{navigator.clipboard.writeText(EMAIL).then(function(){set(true);setTimeout(function(){set(false)},2200)})}catch(x){}
+  }
+  return e("section",{id:"top"},
+    e("div",{className:"id"},e("div",{className:"av"},"SK"),
+      e("div",null,e("h1",null,"Sanjeev Kulkarni"),e("p",{className:"role"},"Full Stack Developer, Data Analyst & AI Enthusiast"))),
+    e("p",{className:"bio"},"I build software end to end, from ",e("b",null,"backend logic")," to the interfaces on top, and I turn large datasets into ",e("b",null,"reports and dashboards")," people can act on. I’m increasingly drawn to ",e("b",null,"AI"),", especially chat assistants and machine learning."),
+    e("p",{className:"bio"},"Data analyst with 2+ years in SQL, reporting and dashboards. At ",e("b",null,"Quadface Technologies"),", I supported production allocation, reconciled well-level data, and guided junior teammates on SQL standards. I also freelance for ",e("b",null,"Groser"),", an online grocery startup, managing its backend data, inventory tracking, sales analysis and dashboards. I’m keen to grow into credit and risk analytics."),
+    e("p",{className:"bio"},"I enjoy understanding how things work behind the scenes, and I believe the best way to learn development is by building something useful."),
+    e("div",{className:"panel"},
+      e("dl",{className:"sk"},SKILLS.map(function(r){return e(Fr,{key:r[0]},e("dt",null,r[0]),e("dd",null,r[1]))})),
+      e("div",{className:"cta"},
+        e("p",{className:"status"},e("i"),"Open to data, full stack, backend and AI roles, and keen on credit and risk analytics"),
+        e("p",{className:"pitch"},"Have something to build with data or AI? Let’s talk."),
+        e("div",{className:"btns"},
+          e("a",{className:"btn dark",href:"mailto:"+EMAIL+"?subject=Hello%20Sanjeev",onClick:copy},copied?"Email copied ✓":"Email me"),
+          e("a",{className:"btn",href:"Sanjeev_K_Resume.pdf",download:true},"Download resume ↓"),
+          e("a",{className:"btn",href:"#contact"},"See socials")))));
+}
+
+function Section(p){
+  return e("section",{id:p.id},e("h2",null,p.title),p.children);
+}
+
+function App(){
+  var toggle=useTheme(),active=useActive(NAV.map(function(n){return n[1]}));
+  var seen=false;try{seen=sessionStorage.getItem("seen")==="1"}catch(x){}
+  var skip=seen||matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var s=S(!skip),showIntro=s[0],setShow=s[1];
+  return e(Fr,null,
+    showIntro&&e(Intro,{onDone:function(){setShow(false)}}),
+    e("div",{className:"wrap"},
+      e(Header,{active:active,onTheme:toggle}),
+      e("main",null,
+        e(Hero),
+        e(Section,{id:"work",title:"projects."},PROJECTS.map(function(p,i){return e(Project,{key:p.name,p:p,i:i})})),
+        e(Section,{id:"exp",title:"experience."},
+          [GROSER,JOB].map(function(j){return e("div",{className:"job",key:j.org},e("div",{className:"top"},e("strong",null,j.role),e("span",null,j.when)),e("p",null,j.org),e("p",{className:"story"},j.story),j.stats&&e("div",{className:"stats"},j.stats.map(function(s){return e("div",{key:s[0]},e("b",null,s[0]),e("span",null,s[1]))})),e("ul",{className:"tags",style:{padding:0,margin:".8rem 0 0"}},j.tags.map(function(t){return e("li",{key:t},t)})))}),
+          e("h2",null,"education."),
+          e("div",{className:"job"},
+            e("div",{className:"top"},e("strong",null,"KLE Technological University, Hubballi"),e("span",null,"Feb 2022 – Jan 2024")),
+            e("p",null,"Master of Computer Applications (MCA), CGPA 8.54")),
+          e("h2",null,"achievements."),
+          e("ul",{className:"ach"},ACH.map(function(t){return e("li",{key:t},t)})),
+          e("h2",null,"what’s next."),
+          e("ul",{className:"ach"},NEXT.map(function(t){return e("li",{key:t},t)}))),
+        e(Section,{id:"contact",title:"socials."},
+          e("ul",{className:"soc"},SOCIAL.map(function(l){
+            var ext=l[1].indexOf("http")===0;
+            return e("li",{key:l[0]},e("a",{href:l[1],target:ext?"_blank":undefined,rel:ext?"noopener noreferrer":undefined},l[0]));
+          })))),
+      e("blockquote",{className:"quote"},"“If you want to do what you want to do, you have to do what you have to do.”"),
+      e("footer",null,e("span",null,"Last updated · Nov 18, 2026"),e("span",null,"© 2026 Sanjeev Kulkarni"))));
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(e(App));
+})();
+</script>
+</body>
+</html>
