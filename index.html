@@ -7,79 +7,68 @@
 <meta name="description" content="Portfolio of Sanjeev Kulkarni: full stack and backend development, data analysis and AI with Python, JavaScript, SQL and REST APIs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FCFCFA;--card:#F3F3F0;--ink:#161616;--mute:#6B6B68;--line:#E3E3DE;--acc:#5B4BFF;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121214;--card:#1B1B1F;--ink:#F2F2F0;--mute:#9A9A97;--line:#2C2C31;--acc:#A39BFF}}
-:root[data-theme="dark"]{--bg:#121214;--card:#1B1B1F;--ink:#F2F2F0;--mute:#9A9A97;--line:#2C2C31;--acc:#A39BFF}
-html{scroll-behavior:smooth;scroll-padding-top:5rem;height:auto}
+:root{--bg:#EEF2F7;--card:#FFFFFF;--ink:#0F172A;--mute:#5B6B82;--line:#D5DDE8;--acc:#0F766E;box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1220;--card:#111A2E;--ink:#E6EDF7;--mute:#8CA0BC;--line:#1F2D47;--acc:#2DD4BF}}
+:root[data-theme="dark"]{--bg:#0B1220;--card:#111A2E;--ink:#E6EDF7;--mute:#8CA0BC;--line:#1F2D47;--acc:#2DD4BF}
+html{scroll-behavior:smooth;scroll-padding-top:6rem}
 *,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Hanken Grotesk",system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Hanken Grotesk",system-ui,sans-serif;padding-top:calc(5.5rem + env(safe-area-inset-top,0px));padding-bottom:env(safe-area-inset-bottom,0px)}
 a{color:inherit}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
-.wrap{max-width:660px;margin:0 auto;padding:0 1.25rem}
-header{position:sticky;top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);z-index:5}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:6}
-nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0;font-size:.95rem}
-nav div{display:flex;gap:1.4rem}
-nav a{text-decoration:none;color:var(--mute);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
-nav a:hover{color:var(--ink)}
-nav a[aria-current="true"]{color:var(--ink);border-color:var(--acc)}
-.ic{background:none;border:0;color:var(--mute);cursor:pointer;padding:.2rem .4rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+.topbar{position:fixed;z-index:5;left:50%;transform:translateX(-50%);top:calc(.9rem + env(safe-area-inset-top,0px));width:min(94vw,760px);display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem .6rem .5rem .6rem;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--card) 85%,transparent);backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:600}
+.topbar nav{display:flex;gap:.2rem}
+.topbar nav a{text-decoration:none;color:var(--mute);padding:.35rem .8rem;border-radius:999px;font-size:.92rem;transition:color .2s,background .2s}
+.topbar nav a:hover{color:var(--ink)}
+.topbar nav a[aria-current="true"]{background:var(--ink);color:var(--bg)}
+.av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#14B8A6,#3B82F6);display:grid;place-items:center;font:700 .8rem "Hanken Grotesk",sans-serif;color:#fff;flex:none}
+.ic{background:none;border:1px solid var(--line);border-radius:999px;color:var(--mute);cursor:pointer;padding:.3rem .8rem}
 .ic:hover{color:var(--ink)}
-.id{display:flex;gap:1rem;align-items:center;margin:2.5rem 0 1.2rem}
-.av{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#7DD3FC,#A78BFA 60%,#F9A8D4);display:grid;place-items:center;font:700 1.2rem "Hanken Grotesk",sans-serif;color:#fff;flex:none}
-h1{font:700 1.8rem/1.1 "Hanken Grotesk",sans-serif;letter-spacing:-.02em;margin:0}
-.role{color:var(--mute);margin:0}
-.bio{color:var(--mute);margin:0 0 1rem}
-.bio b{color:var(--ink);font-weight:500}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;margin-top:1.6rem}
-.sk{display:grid;grid-template-columns:7.5rem 1fr;gap:.35rem 1rem;margin:0 0 1rem;font-size:.95rem}
-.sk dt{color:var(--mute)}
-.sk dd{margin:0}
-.cta{border-top:1px solid var(--line);padding-top:1.1rem}
-.status{display:flex;align-items:center;gap:.5rem;margin:0 0 .5rem;font-size:.9rem;color:var(--mute)}
-.status i{width:8px;height:8px;border-radius:50%;background:#22C55E;animation:ping 2s infinite}
+.hero{padding:3rem 0 1rem;max-width:760px}
+.status{display:inline-flex;align-items:center;gap:.5rem;margin:0 0 1.2rem;font-size:.9rem;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:.25rem .9rem;background:var(--card)}
+.status i{flex:none;width:8px;height:8px;border-radius:50%;background:#22C55E;animation:ping 2s infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 #22C55E99}70%,100%{box-shadow:0 0 0 8px #22C55E00}}
-.pitch{font:italic 400 1.6rem/1.2 "Instrument Serif",Georgia,serif;margin:0}
-.btns{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
-.btn{display:inline-flex;gap:.5rem;align-items:center;padding:.55rem 1rem;border-radius:10px;font-weight:500;font-size:.95rem;text-decoration:none;cursor:pointer;border:1px solid var(--line);background:var(--bg);transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-h2{font:400 2rem/1 "Instrument Serif",Georgia,serif;font-style:italic;margin:3.5rem 0 1.2rem}
-.proj{margin:0 -.8rem;border-radius:12px;transition:background .2s}
-.proj.open,.proj:hover{background:var(--card)}
-.proj>button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:.1rem 1rem;width:100%;padding:1rem .8rem;cursor:pointer;border-radius:12px}
-.proj>button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.proj strong{font-weight:600}
-.proj span{color:var(--mute);font-size:.9rem}
-.proj p{grid-column:1/-1;margin:.2rem 0 0;color:var(--mute);font-size:.95rem}
-.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
-.open .more{grid-template-rows:1fr}
-.more>div{overflow:hidden;padding:0 .8rem}
-.more p{color:var(--mute);font-size:.95rem;margin:0 0 .8rem}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;grid-column:1/-1;margin-top:.5rem}
-.tags li{list-style:none;font-size:.8rem;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:.05rem .6rem;background:var(--bg)}
-.tags{padding:0;margin:.5rem 0 0}
-.chev{display:inline-block;transition:transform .3s}
-.open .chev{transform:rotate(180deg)}
-.job{margin-bottom:1.6rem}
-.job .top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.job strong{font-weight:600}
-.job .story{color:var(--ink);margin:.5rem 0 0}
+h1{font:600 clamp(2.8rem,9vw,5.2rem)/.98 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.04em;margin:0}
+.role{color:var(--acc);font-weight:500;font-size:1.15rem;margin:.8rem 0 1.6rem}
+.lead{font:500 1.4rem/1.4 "Space Grotesk",system-ui,sans-serif;margin:0 0 1rem}
+.lead b,.bio b{color:var(--acc);font-weight:600}
+.bio{color:var(--mute);margin:0 0 1rem}
+.pitch{font:600 1.3rem/1.2 "Space Grotesk",system-ui,sans-serif;margin:1.8rem 0 0}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn{display:inline-flex;align-items:center;padding:.65rem 1.2rem;border-radius:999px;font-weight:500;text-decoration:none;cursor:pointer;border:1px solid var(--line);background:var(--card);transition:transform .15s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--acc)}
+.btn.dark{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.3rem;transition:transform .2s,border-color .2s}
+.card p{margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:3rem 0 0;max-width:none}
+.sk small{display:block;color:var(--acc);font:600 .72rem ui-monospace,Menlo,Consolas,monospace;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4rem}
+.sk p{font-size:.95rem}
+h2{font:600 clamp(1.8rem,4vw,2.6rem)/1 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.03em;margin:5rem 0 1.5rem}
+h2::before{content:"";display:inline-block;width:.45em;height:.45em;border-radius:50%;background:var(--acc);margin-right:.5rem}
+h3{font:600 1.3rem/1 "Space Grotesk",system-ui,sans-serif;margin:0 0 1rem}
+.proj:hover,.nx:hover{transform:translateY(-3px);border-color:var(--acc)}
+.ph,.top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+.ph span{color:var(--acc);font:.72rem ui-monospace,Menlo,Consolas,monospace;text-transform:uppercase}
+.proj>p,.card>p{margin-top:.5rem;font-size:.95rem}
+.mu{color:var(--mute)}
+.lnk{display:inline-block;margin-top:.8rem;color:var(--acc);font-weight:500;text-decoration:none}
+.lnk:hover{text-decoration:underline}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 0;padding:0}
+.tags li{list-style:none;font:.74rem/1.6 ui-monospace,Menlo,Consolas,monospace;color:var(--mute);border:1px solid var(--line);border-radius:6px;padding:0 .55rem}
+.top span{color:var(--mute);font-size:.9rem}
 .stats{display:flex;gap:2rem;flex-wrap:wrap;margin:1rem 0 0}
-.stats b{display:block;font:italic 400 2rem/1 "Instrument Serif",Georgia,serif;color:var(--acc)}
+.stats b{display:block;font:600 1.9rem/1 "Space Grotesk",system-ui,sans-serif;color:var(--acc)}
 .stats span{font-size:.85rem;color:var(--mute)}
-.job .tags li{font-size:.8rem;margin:0}
-.job .top span,.job li,.job>p{color:var(--mute);font-size:.95rem;margin:0}
-.job ul,.ach{margin:.5rem 0 0;padding-left:1.1rem;color:var(--mute);font-size:.95rem}
-.job li,.ach li{margin-bottom:.35rem}
-.soc{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem;padding:0;margin:0;list-style:none}
-.soc a{text-decoration:none;color:var(--mute);transition:color .2s}
-.soc a:hover{color:var(--acc)}
-.quote{margin:4.5rem 0 0;padding:0 .5rem;text-align:center;font:italic 400 clamp(1.5rem,5vw,2.1rem)/1.25 "Instrument Serif",Georgia,serif;text-wrap:balance}
+.ach{margin:0;padding-left:1.1rem;color:var(--mute);font-size:.95rem}
+.ach li{margin-bottom:.4rem}
+.nx{display:flex;gap:.8rem;align-items:flex-start;font-size:.95rem}
+.nx b{color:var(--acc);font:600 .8rem ui-monospace,Menlo,Consolas,monospace;padding-top:.15rem}
+.quote{margin:6rem auto 0;max-width:760px;padding:0 .5rem;text-align:center;font:500 clamp(1.5rem,4vw,2.3rem)/1.25 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.02em;text-wrap:balance}
 .quote::before{content:"";display:block;width:2.5rem;height:3px;border-radius:2px;background:var(--acc);margin:0 auto 1.4rem}
 footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:4rem;padding:1.2rem 0 2rem;color:var(--mute);font-size:.85rem}
 #intro{position:fixed;inset:0;z-index:50;background:#fff;color:#161616;display:grid;place-items:center;transition:transform .8s cubic-bezier(.77,0,.18,1)}
@@ -90,9 +79,9 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border
 #me .av{width:56px;height:56px;font-size:1.05rem}
 #me b{font-size:1.6rem;letter-spacing:-.02em}
 @keyframes pop{from{opacity:0;transform:scale(.7)}}
-#intro .ic{color:#6B6B68}
+#intro .ic{color:#6B6B68;border:0}
 #skip{position:absolute;bottom:calc(2rem + env(safe-area-inset-bottom,0px));font-size:.85rem}
-@media (max-width:520px){.soc{grid-template-columns:1fr}.sk{grid-template-columns:1fr;gap:0}.sk dd{margin-bottom:.6rem}}
+@media (max-width:760px){.grid,.skills{grid-template-columns:1fr}.brand span+*{display:none}.topbar nav a{padding:.35rem .55rem;font-size:.85rem}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -143,7 +132,7 @@ var JOB={role:"Software Consultant Trainee",org:"Quadface Technologies, remote",
  tags:["SQL","Tableau","Energy Components","Data reconciliation"]};
 var ACH=["Earned the Gold Badge on HackerRank (SQL / Python).","Took part in the EY Scholarship Program, “A Brand Called YOU”.","Featured on Quadface Technologies’ official website for my contributions."];
 var NEXT=["Building more practical software projects.","Improving problem-solving and development skills.","Exploring AI-powered applications and automation.","Growing into credit and risk analytics.","Learning how to build better, more reliable systems."];
-var SOCIAL=[["GitHub ↗","https://github.com/Sanjeev0110/"],["LinkedIn ↗","https://www.linkedin.com/in/sanjeev-kulkarni-a03563229/"],["Email ↗","mailto:"+EMAIL],["Call +91 78130 88894","tel:+917813088894"]];
+var SOCIAL=[["GitHub ↗","https://github.com/Sanjeev0110/"],["LinkedIn ↗","https://www.linkedin.com/in/sanjeev-kulkarni-a03563229/"],["Email ↗","mailto:"+EMAIL]];
 var NAV=[["home","top"],["projects","work"],["experience","exp"],["contact","contact"]];
 
 /* ---------- hooks ---------- */
@@ -198,50 +187,50 @@ function Intro(p){
 }
 
 function Header(p){
-  return e("header",null,e("nav",null,
-    e("div",null,NAV.map(function(n){
+  return e("header",{className:"topbar"},
+    e("a",{href:"#top",className:"brand"},e("span",{className:"av"},"SK"),e("span",null,"Sanjeev")),
+    e("nav",null,NAV.map(function(n){
       return e("a",{key:n[1],href:"#"+n[1],"aria-current":p.active===n[1]?"true":undefined},n[0]);
     })),
-    e("button",{className:"ic",type:"button","aria-label":"Switch theme",onClick:p.onTheme},"◐")));
+    e("button",{className:"ic",type:"button","aria-label":"Switch theme",onClick:p.onTheme},"◐"));
 }
-
+function Tags(p){return e("ul",{className:"tags"},p.items.map(function(t){return e("li",{key:t},t)}))}
 function Project(p){
-  var d=p.p,s=S(false),open=s[0],set=s[1],id="pm-"+p.i;
-  return e("div",{className:"proj"+(open?" open":"")},
-    e("button",{type:"button","aria-expanded":open,"aria-controls":id,onClick:function(){set(!open)}},
-      e("strong",null,d.name),
-      e("span",null,d.kind+" ",e("span",{className:"chev","aria-hidden":"true"},"▾")),
-      e("p",null,d.sum)),
-    e("div",{className:"more",id:id},e("div",null,e("p",null,d.more),d.link&&e("a",{href:d.link,target:"_blank",rel:"noopener noreferrer",tabIndex:open?0:-1,style:{color:"var(--acc)",fontSize:".95rem",display:"inline-block",marginBottom:".8rem"}},d.linkText))),
-    e("ul",{className:"tags",style:{padding:"0 .8rem 1rem"}},d.tags.map(function(t){return e("li",{key:t},t)})));
+  var d=p.p;
+  return e("article",{className:"card proj"},
+    e("div",{className:"ph"},e("strong",null,d.name),e("span",null,d.kind)),
+    e("p",null,d.sum),e("p",{className:"mu"},d.more),
+    d.link&&e("a",{className:"lnk",href:d.link,target:"_blank",rel:"noopener noreferrer"},d.linkText),
+    e(Tags,{items:d.tags}));
 }
-
+function JobCard(p){
+  var j=p.j;
+  return e("article",{className:"card"},
+    e("div",{className:"top"},e("strong",null,j.role),e("span",null,j.when)),
+    e("p",{className:"mu"},j.org),e("p",null,j.story),
+    j.stats&&e("div",{className:"stats"},j.stats.map(function(s){return e("div",{key:s[0]},e("b",null,s[0]),e("span",null,s[1]))})),
+    e(Tags,{items:j.tags}));
+}
 function Hero(){
   var s=S(false),copied=s[0],set=s[1];
   function copy(){
     try{navigator.clipboard.writeText(EMAIL).then(function(){set(true);setTimeout(function(){set(false)},2200)})}catch(x){}
   }
-  return e("section",{id:"top"},
-    e("div",{className:"id"},e("div",{className:"av"},"SK"),
-      e("div",null,e("h1",null,"Sanjeev Kulkarni"),e("p",{className:"role"},"Full Stack Developer, Data Analyst & AI Enthusiast"))),
-    e("p",{className:"bio"},"I build software end to end, from ",e("b",null,"backend logic")," to the interfaces on top, and I turn large datasets into ",e("b",null,"reports and dashboards")," people can act on. I’m increasingly drawn to ",e("b",null,"AI"),", especially chat assistants and machine learning."),
+  return e("section",{id:"top",className:"hero"},
+    e("p",{className:"status"},e("i"),"Open to data, full stack, backend and AI roles, and keen on credit and risk analytics"),
+    e("h1",null,"Sanjeev Kulkarni"),
+    e("p",{className:"role"},"Full Stack Developer, Data Analyst & AI Enthusiast"),
+    e("p",{className:"lead"},"I build software end to end, from ",e("b",null,"backend logic")," to the interfaces on top, and I turn large datasets into ",e("b",null,"reports and dashboards")," that people can act on. I’m increasingly drawn to ",e("b",null,"AI"),", especially chat assistants that make everyday applications smarter."),
     e("p",{className:"bio"},"Data analyst with 2+ years in SQL, reporting and dashboards. At ",e("b",null,"Quadface Technologies"),", I supported production allocation, reconciled well-level data, and guided junior teammates on SQL standards. I also freelance for ",e("b",null,"Groser"),", an online grocery startup, managing its backend data, inventory tracking, sales analysis and dashboards. I’m keen to grow into credit and risk analytics."),
     e("p",{className:"bio"},"I enjoy understanding how things work behind the scenes, and I believe the best way to learn development is by building something useful."),
-    e("div",{className:"panel"},
-      e("dl",{className:"sk"},SKILLS.map(function(r){return e(Fr,{key:r[0]},e("dt",null,r[0]),e("dd",null,r[1]))})),
-      e("div",{className:"cta"},
-        e("p",{className:"status"},e("i"),"Open to data, full stack, backend and AI roles, and keen on credit and risk analytics"),
-        e("p",{className:"pitch"},"Have something to build with data or AI? Let’s talk."),
-        e("div",{className:"btns"},
-          e("a",{className:"btn dark",href:"mailto:"+EMAIL+"?subject=Hello%20Sanjeev",onClick:copy},copied?"Email copied ✓":"Email me"),
-          e("a",{className:"btn",href:"Sanjeev_K_Resume.pdf",download:true},"Download resume ↓"),
-          e("a",{className:"btn",href:"#contact"},"See socials")))));
+    e("p",{className:"pitch"},"Have something to build with data or AI? Let’s talk."),
+    e("div",{className:"btns"},
+      e("a",{className:"btn dark",href:"mailto:"+EMAIL+"?subject=Hello%20Sanjeev",onClick:copy},copied?"Email copied ✓":"Email me"),
+      e("a",{className:"btn",href:"Sanjeev_K_Resume.pdf",download:true},"Download resume ↓"),
+      e("a",{className:"btn",href:"#contact"},"See socials")),
+    e("div",{className:"skills"},SKILLS.map(function(r){return e("div",{className:"card sk",key:r[0]},e("small",null,r[0]),e("p",null,r[1]))})));
 }
-
-function Section(p){
-  return e("section",{id:p.id},e("h2",null,p.title),p.children);
-}
-
+function Section(p){return e("section",{id:p.id},e("h2",null,p.title),p.children)}
 function App(){
   var toggle=useTheme(),active=useActive(NAV.map(function(n){return n[1]}));
   var seen=false;try{seen=sessionStorage.getItem("seen")==="1"}catch(x){}
@@ -249,25 +238,25 @@ function App(){
   var s=S(!skip),showIntro=s[0],setShow=s[1];
   return e(Fr,null,
     showIntro&&e(Intro,{onDone:function(){setShow(false)}}),
+    e(Header,{active:active,onTheme:toggle}),
     e("div",{className:"wrap"},
-      e(Header,{active:active,onTheme:toggle}),
       e("main",null,
         e(Hero),
-        e(Section,{id:"work",title:"projects."},PROJECTS.map(function(p,i){return e(Project,{key:p.name,p:p,i:i})})),
+        e(Section,{id:"work",title:"projects."},e("div",{className:"grid"},PROJECTS.map(function(p){return e(Project,{key:p.name,p:p})}))),
         e(Section,{id:"exp",title:"experience."},
-          [GROSER,JOB].map(function(j){return e("div",{className:"job",key:j.org},e("div",{className:"top"},e("strong",null,j.role),e("span",null,j.when)),e("p",null,j.org),e("p",{className:"story"},j.story),j.stats&&e("div",{className:"stats"},j.stats.map(function(s){return e("div",{key:s[0]},e("b",null,s[0]),e("span",null,s[1]))})),e("ul",{className:"tags",style:{padding:0,margin:".8rem 0 0"}},j.tags.map(function(t){return e("li",{key:t},t)})))}),
-          e("h2",null,"education."),
-          e("div",{className:"job"},
-            e("div",{className:"top"},e("strong",null,"KLE Technological University, Hubballi"),e("span",null,"Feb 2022 – Jan 2024")),
-            e("p",null,"Master of Computer Applications (MCA), CGPA 8.54")),
-          e("h2",null,"achievements."),
-          e("ul",{className:"ach"},ACH.map(function(t){return e("li",{key:t},t)})),
-          e("h2",null,"what’s next."),
-          e("ul",{className:"ach"},NEXT.map(function(t){return e("li",{key:t},t)}))),
+          e("div",{className:"grid"},[GROSER,JOB].map(function(j){return e(JobCard,{key:j.org,j:j})})),
+          e("div",{className:"grid",style:{marginTop:"1rem"}},
+            e("article",{className:"card"},e("h3",null,"education."),
+              e("div",{className:"top"},e("strong",null,"KLE Technological University, Hubballi"),e("span",null,"Feb 2022 – Jan 2024")),
+              e("p",{className:"mu"},"Master of Computer Applications (MCA), CGPA 8.54")),
+            e("article",{className:"card"},e("h3",null,"achievements."),
+              e("ul",{className:"ach"},ACH.map(function(t){return e("li",{key:t},t)}))))),
+        e(Section,{id:"next",title:"what’s next."},
+          e("div",{className:"grid"},NEXT.map(function(t,i){return e("div",{className:"card nx",key:t},e("b",null,"0"+(i+1)),e("span",null,t))}))),
         e(Section,{id:"contact",title:"socials."},
-          e("ul",{className:"soc"},SOCIAL.map(function(l){
+          e("div",{className:"btns"},SOCIAL.map(function(l){
             var ext=l[1].indexOf("http")===0;
-            return e("li",{key:l[0]},e("a",{href:l[1],target:ext?"_blank":undefined,rel:ext?"noopener noreferrer":undefined},l[0]));
+            return e("a",{key:l[0],className:"btn",href:l[1],target:ext?"_blank":undefined,rel:ext?"noopener noreferrer":undefined},l[0]);
           })))),
       e("blockquote",{className:"quote"},"“If you want to do what you want to do, you have to do what you have to do.”"),
       e("footer",null,e("span",null,"Last updated · Nov 18, 2026"),e("span",null,"© 2026 Sanjeev Kulkarni"))));
