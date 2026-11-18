@@ -127,7 +127,7 @@ var GROSER={role:"Backend data & reporting (freelance)",org:"Groser, an online g
  story:"I joined Groser early to set up its data from scratch. I look after the website’s backend data and inventory, follow daily orders, and turn sales numbers into Metabase dashboards the team can use to decide what to stock.",
  stats:[["~INR 10L","monthly sales supported"],["5–7%","average monthly sales growth after the site launched"]],
  tags:["Metabase","Excel","Google Sheets","Inventory tracking"]};
-var JOB={role:"Software Consultant Trainee",org:"Quadface Technologies, remote",when:"Jun 2024 – Feb 2026",
+var JOB={role:"Software Consultant",org:"Quadface Technologies, remote",when:"Jun 2024 – Feb 2026",
  story:"I worked on upstream production data in Energy Components: supporting daily and monthly allocation, reconciling well-level numbers across cycles and resolving discrepancies. I wrote the SQL behind the reports, built Tableau dashboards for production trends, kept audit-ready validation logs, and trained junior teammates on SQL standards and EC workflows.",
  tags:["SQL","Tableau","Energy Components","Data reconciliation"]};
 var ACH=["Earned the Gold Badge on HackerRank (SQL / Python).","Took part in the EY Scholarship Program, “A Brand Called YOU”.","Featured on Quadface Technologies’ official website for my contributions."];
@@ -167,7 +167,7 @@ function useActive(ids){
 
 /* ---------- components ---------- */
 function Intro(p){
-  var words=["Hello","ನಮಸ್ಕಾರ","नमस्ते","Hola","Bonjour","こんにちは","Ciao"];
+  var words=["Hello","ನಮಸ್ಕಾರ","नमस्ते","Hola","こんにちは","Ciao"];
   var s=S(0),i=s[0],setI=s[1],o=S(false),out=o[0],setOut=o[1],doneRef=R(false);
   function finish(){
     if(doneRef.current)return;doneRef.current=true;setOut(true);
